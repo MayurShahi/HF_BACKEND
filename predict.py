@@ -6,8 +6,8 @@ import pandas as pd
 
 
 
-model = joblib.load(r'C:\AI_Project\Body Fat Prediction\models\random_forest.pkl')
-scaler = joblib.load(r'C:\AI_Project\Body Fat Prediction\models\scaler.pkl')
+model = joblib.load(r'C:\AI_Project\Heart_Failure_Prediction\app\random_forest.pkl')
+scaler = joblib.load(r'C:\AI_Project\Heart_Failure_Prediction\models\scaler.pkl')
 
 # Feature Order
 
