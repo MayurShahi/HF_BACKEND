@@ -1,9 +1,9 @@
 from fastapi import FastAPI , HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.predict import predict
-from app.chatbot import medical_chat
-from app.schemas import (
+from predict import predict
+from chatbot import medical_chat
+from schemas import (
     HeartFailureInput,
     PredictionResponse,
     ChatRequest,
@@ -112,3 +112,9 @@ def explain_prediction( request : PredictionExplanationRequest):
             status_code= 500,
             detail = str(e)
         )
+
+
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
