@@ -5,9 +5,13 @@ import pandas as pd
 # Load the trained Model
 
 
+from pathlib import Path
+import joblib
 
-model = joblib.load(r'C:\AI_Project\Heart_Failure_Prediction\app\random_forest.pkl')
-scaler = joblib.load(r'C:\AI_Project\Heart_Failure_Prediction\models\scaler.pkl')
+BASE_DIR = Path(__file__).resolve().parent
+
+model = joblib.load(BASE_DIR / "random_forest.pkl")
+scaler = joblib.load(BASE_DIR / "scaler.pkl")
 
 # Feature Order
 
