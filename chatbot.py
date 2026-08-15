@@ -57,7 +57,7 @@ def medical_chat(
         context = build_context(prediction_result, patient_data)
 
     completion = client.chat.completions.create(
-        model="qwen/qwen3.6-27b",
+        model="openai/gpt-oss-120b",
         messages=[
             {
                 "role": "system",
